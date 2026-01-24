@@ -1,0 +1,132 @@
+html tage (list,tables) : to create a simple html file to 
+unordered list   <ul>
+ordered list     <ol>
+descriptive list <dl>
+nested list      
+how to define these?
+symbols we can use for uniordered list?
+disk, circle, square, etc
+how to deploy it in code ?
+use type attribute in ul tag
+example:
+<ul type="disk">
+  <li>item1</li>
+  <li>item2</li>
+</ul>
+same goes for ordered list, some more symbols used in odered are alphabetic(lower/upper), roman(lower/upper)
+to embedd them in code use type attribute in ol tag
+
+
+Design a web page for a college department that displays
+1) department facilities using an unordered list (depart=CSE , mention department name first (add a scrolling text below main heading)list everything else acc to yourself deprtment faciilties and all in points)
+2)semester-wise subjects using an ordered list    (sem 1-8 (mention 5 sub per sem))
+3)course details(description) using a descriptive list (provide description for all the courses (giive 2-3 lines each))
+4)subjects with units using a nested list   (every subject has 4 units give a brief descroption of each unit)
+use diff colors for heading 
+use bold,italics,underline where necessary
+horizontal seperation between sections
+other extra attractive functions of html
+make it a bit impressive
+use backround images and other (give img as img name and also tell me by what name should i save the image)
+dont use anything rather then what is used in below info
+
+
+
+TABLES in html
+table are used to display data in tabular form
+table tag
+th - table header it is used to define header cell in a table
+td - table data it is used to define data cell in a table
+tr - table row it is used to define a row in a table
+difference between th and td is th is bold and centered by default where as td is normal text left aligned by default
+caption tag is used to add title to the table
+basic structures
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Table Example</title>
+    </head>
+    <body>
+        <table border="1">
+            <caption>Student Scores</caption>
+            <tr>
+                <th>Name</th>
+                <th>Subject</th>
+                <th>Score</th>
+            </tr>
+            <tr>
+                <td>Alice</td>
+                <td>Math</td>
+                <td>95</td>
+            </tr>
+            <tr>
+                <td>Bob</td>
+                <td>Science</td>
+                <td>88</td>
+            </tr>
+        </table>
+    </body>
+
+rowspan and colspan attributes
+rowspan attribute is used to merge two or more rows in a table vertically
+colspan attribute is used to merge two or more columns in a table horizontally
+example:
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Table with Rowspan and Colspan</title>
+    </head>
+    <body>
+        <table border="1">
+            <tr>
+                <th rowspan="2">Name</th>
+                <th colspan="2">Scores</th>
+            </tr>
+            <tr>
+                <th>Math</th>
+                <th>Science</th>
+            </tr>
+            <tr>
+                <td>Alice</td>
+                <td>95</td>
+                <td>90</td>
+            </tr>
+            <tr>
+                <td>Bob</td>
+                <td>88</td>
+                <td>85</td>
+            </tr>
+        </table>
+    </body>
+
+
+    example
+    internal styling is when we apply style to individual page using style tag in head section
+    inline styling is when we have less elements to style 
+    external styling is when we have large number of pages to style we use external css file
+    external css file is linked to html file using link tag in head section
+
+    difference between margin and padding
+    margin is the space outside the border of an element
+    padding is the space between the content and the border of an element
+
+    in side style for table
+    width,margin,font
+
+    for header
+    border,padding,text-align,background color,text color,
+marking->mark tag is used to highlight text has default yellow background color
+to change color use style attribute in mark tag
+border style can be changed using border-style attribute in style
+different border styles are solid,dashed,dotted,double,groove,ridge,inset,outset,none,hidden
+
+design a web page to design your sections time table which used rowspan and colm span  
+header should have time (entire detail of time) 
+1st colm displays intersection point of header and column as day
+seperate color for header
+alternatively color the rows apart from header
+days column in separate color
+above time table heading graphic era deemed to be University btech cse 6th sem section a same heder as in original time tble like in picture
+table cells mention the subject name only
+seperate color for break use row span in break cell
+
