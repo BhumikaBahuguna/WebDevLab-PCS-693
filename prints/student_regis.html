@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Course Registration</title>
+</head>
+
+<body bgcolor="#EAF4FF">
+
+<h2 align="center">
+    <b>GRAPHIC ERA DEEMED TO BE UNIVERSITY</b><br>
+    <b>Student Course Registration Form</b>
+</h2>
+
+<center>
+    <img src="logo.png" alt="College Logo" height="100"><br>
+    <font color="blue" size="3">
+        <b>Graphic Era Deemed to be University, Dehradun</b>
+    </font>
+</center>
+
+<br>
+
+<center>
+<form action="thankyou.html" method="get" autocomplete="off" target="_blank"
+style="background-color:#DCEEFF; width:480px; padding:20px; border-radius:12px;">
+
+<table cellpadding="6" cellspacing="0">
+
+<tr>
+<td><b>Student Name:</b></td>
+<td><input type="text" name="name" required minlength="3" maxlength="30"></td>
+</tr>
+
+<tr>
+<td><b>University Email:</b></td>
+<td>
+<input type="email" name="email" required pattern="[0-9]+@geu\.ac\.in">
+</td>
+</tr>
+
+<tr>
+<td><b>USN / Roll Number:</b></td>
+<td>
+<input type="text" name="roll" required pattern="[A-Z]{2}[0-9]{2}[A-Z]{3}">
+</td>
+</tr>
+
+<tr>
+<td><b>Age:</b></td>
+<td>
+<input type="number" name="age" required min="18" max="30">
+</td>
+</tr>
+
+<tr>
+<td><b>Gender:</b></td>
+<td>
+<input type="radio" name="gender" required> Male
+&nbsp;&nbsp;
+<input type="radio" name="gender"> Female
+</td>
+</tr>
+
+<tr>
+<td><b>Select Course:</b></td>
+<td>
+<select name="course" required>
+    <option value="" selected disabled>--Select--</option>
+    <option>C Programming</option>
+    <option>C++ Programming</option>
+    <option>Data Structures</option>
+    <option>Web Development</option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td><b>Feedback:</b></td>
+<td>
+<textarea name="feedback" rows="3" cols="25"></textarea>
+</td>
+</tr>
+
+<tr>
+<td><b>Comments:</b></td>
+<td>
+<textarea name="comments" rows="3" cols="25"></textarea>
+</td>
+</tr>
+
+<tr>
+<td colspan="2" align="center">
+<br>
+<input type="submit" value="Submit">
+&nbsp;&nbsp;
+<input type="reset" value="Reset">
+</td>
+</tr>
+
+</table>
+
+<input type="hidden" name="college" value="Graphic Era University">
+
+</form>
+</center>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!-- 
+pseudo classes- defines special states of an element and is used to style an element when it is in that state
+examples of pseudo classes
+1 :link - applies to links that have not yet been visited.
+2 :visited - applies once a link has been visited by the user.
+3 :hover - applies when the user designates an element (with a pointing device), but does not activate it. for example when the user hovers the mouse pointer over a button, link, image, etc.
+4 :active - applies when an element is being activated by the user. for example when the user clicks on a button, link, image, etc.:visited - applies once a link has been visited by the user.
+5 :focus - applies when an element has received focus, either from the user selecting it with the mouse or by navigating to it using the keyboard (e.g., pressing the "Tab" key).
+6 :first-child - applies to an element that is the first child of its parent.
+syntax of pseudo class
+selector:pseudo-class {
+    property : value;
+}
+write a program and provide different pseudo clases on an element
+-->
+<DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+            a:link {color:blue;}
+            a:visited {color:red;}
+            a:hover {color:pink;}
+            a:focus{color:green;}  
+            a:active{color:black;}          
+        </style>
+        <a href="b.html">This will move to next Page</a><br>
+    </head>
+    <body>
+        <a class="link" href="b.html">This is a link</a><br>
+        <a class="visited" href="b.html">This is a visited link</a><br>
+        <a class="hover" href="b.html">This is a hover link</a><br>
+        <a class="focus" href="b.html">This is a focus link</a><br>
+        <a class="active" href="b.html">This is an active link</a>
+    </body>
+</html>

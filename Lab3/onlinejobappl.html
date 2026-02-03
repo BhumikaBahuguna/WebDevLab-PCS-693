@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Job Application</title>
+</head>
+
+<body bgcolor="#F2F2F2">
+
+<h2 align="center">
+    <b>GRAPHIC ERA DEEMED TO BE UNIVERSITY</b><br>
+    <b>Online Job Application Form</b>
+</h2>
+
+<center>
+    <img src="logo.png" alt="Company Logo" height="120">
+</center>
+
+<marquee>
+    <font color="blue" size="4">
+        Graphic Era Deemed to be University, Dehradun
+    </font>
+</marquee>
+
+<hr>
+
+<form action="success.html" method="get" autocomplete="off" target="_blank">
+
+<label for="fullname"><b>Applicant Full Name:</b></label><br>
+<input type="text" id="fullname" name="fullname" required minlength="4" maxlength="50"><br><br>
+
+<label for="email"><b>Email Address:</b></label><br>
+<input type="email" id="email" name="email" required><br><br>
+
+<label for="mobile"><b>Mobile Number:</b></label><br>
+<input type="text" id="mobile" name="mobile" required pattern="[0-9]{10}"><br><br>
+
+<label for="experience"><b>Years of Experience:</b></label><br>
+<input type="number" id="experience" name="experience" required min="0" max="30" step="1"><br><br>
+
+<label for="role"><b>Select Job Role:</b></label><br>
+<select id="role" name="role" required>
+    <option value="">--Select--</option>
+    <option>Software Developer</option>
+    <option>Web Developer</option>
+    <option>Data Analyst</option>
+    <option>System Administrator</option>
+</select><br><br>
+
+<label><b>Technical Skills:</b></label><br>
+<input type="checkbox" id="c" name="skills" value="C">
+<label for="c">C</label><br>
+
+<input type="checkbox" id="cpp" name="skills" value="C++">
+<label for="cpp">C++</label><br>
+
+<input type="checkbox" id="java" name="skills" value="Java">
+<label for="java">Java</label><br>
+
+<input type="checkbox" id="web" name="skills" value="Web Development">
+<label for="web">Web Development</label><br><br>
+
+<label for="cover"><b>Cover Letter:</b></label><br>
+<textarea id="cover" name="cover" rows="5" cols="40"></textarea><br><br>
+
+<center>
+    <input type="submit" value="Submit Application">
+    &nbsp;&nbsp;
+    <input type="reset" value="Reset">
+</center>
+
+</form>
+
+</body>
+</html>

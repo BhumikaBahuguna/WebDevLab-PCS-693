@@ -1,0 +1,42 @@
+<!--
+pseudo element selectors- used to style a specific part of an element
+1 ::after- used to insert content after an element
+2 ::before- used to insert content before an element
+3 ::first-letter- used to style the first letter of an element
+4 ::first-line- used to style the first line of an element
+5 ::selection- used to style the portion of an element that is selected by the user
+syntax of pseudo element selector
+selector::pseudo-element {
+    property : value;
+}
+-->
+
+<DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+            p::first-letter {
+                color: red;
+                font-size: 200%;
+            }
+            p::first-line {
+                color: blue;
+                font-weight: bold;
+            }
+            p::after {
+                content: " [This is after the paragraph]";
+                color: green;
+            }
+            p::before {
+                content: "[This is before the paragraph] ";
+                color: orange;
+            }
+            p::selection {
+                background: yellow;
+                color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <p>This is a sample paragraph to demonstrate pseudo-element selectors in CSS.</p>
+    </body>

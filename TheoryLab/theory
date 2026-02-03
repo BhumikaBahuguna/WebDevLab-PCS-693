@@ -1,0 +1,23 @@
+css : is cascading style sheets used to style html elements on a web page.
+3 types of css  are
+1 inline css (inside an html element using the style attribute)
+2 internal css (inside a <style> tag in the head section of an html document)
+3 external css (in a separate .css file linked to the html document)
+
+
+selectors:
+declaration {
+    property : value;
+}
+table { border :1px solid #c00;}
+
+selectors are divided into 5 categories
+1 simple selectors (select elements based on name, id, class)
+2 combinators (select elements based on a specific relationship between them)
+3 pseudo-classes (select elements based on their state)
+4 pseudo-elements (select and style a part of an element)
+5 attribute selectors (select elements based on an attribute or attribute value)
+
+
+when id selectors are used for property we use # before the id name
+when class selectors are used for property we use . before the class name

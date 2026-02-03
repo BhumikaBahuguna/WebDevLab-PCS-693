@@ -1,0 +1,34 @@
+<!-- you can also apply styles to elements with particular attributes using attribute selectors
+ input[type="text"] {
+    border: 2px solid blue;
+
+there are following rules applied to attrubute selectors
+p[lang] selects all <p> elements with a lang attribute
+p[lang="en"] selects all <p> elements with a lang attribute equal to "en"
+p[lang~="en"] selects all <p> elements with a lang attribute containing the word "en"
+p[lang|="en"] selects all <p> elements with a lang attribute starting with "en" followed by a hyphen
+    
+ -->
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            input[type="text"] {
+                border: 2px solid blue;
+            }
+            a[target="_blank"] {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Attribute Selector Example</h1>
+        <input type="text" placeholder="Text Input">
+        <input type="password" placeholder="Password Input">
+        <br><br>
+        <a href="https://www.example.com" target="_blank">Open in new tab</a>
+        <br>
+        <a href="https://www.example.com" target="_self">Open in same tab</a>
+    </body>

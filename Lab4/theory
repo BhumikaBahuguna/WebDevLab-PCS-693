@@ -1,0 +1,28 @@
+Frames in html divides browser window into various section
+types of Frames
+1) floating frame(inline) : showing content of another webpage here and there in current webpage we can use <iframe> tag for this
+2) navigation frame : like a dashboard can have various sections or options to navigate through different webpages we can use <frame> and <frameset> tag for this
+3) mixed frames : combination of both floating and navigation frames
+
+Example of floating frame:
+<iframe
+src="https://www.example.com" 
+width="600" 
+height="400">
+title="Example Frame">
+</iframe>
+Example of navigation frame:
+<frameset rows="25%,75%">
+  <frame src="navigation.html">
+  <frame src="content.html">
+</frameset>
+
+why frameset is deprecated in HTML5?
+poor seo
+bad accessibility
+bookmarking issues
+
+Q Details and Requiremments:
+every frame has a bg color
+content should cover entire frame (in each frame)
+use a inline frame as a footer and in the footer content in that should be @copyright26
