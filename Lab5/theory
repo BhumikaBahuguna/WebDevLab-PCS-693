@@ -1,0 +1,48 @@
+HTML Maps
+map : to create an html page different types of image map such as circle, rectangle, polygon etc.
+as image map lets you make different clickable areas on an image which can be linked to different destinations.
+in html this is done using the <map> and <area> tags.
+2 types of links:
+absolute and relative links.
+    Basic tage used in HTML maps:
+    <map> : This tag is used to define an image map. It contains one or more <area> tags.
+    <area> : This tag is used to define a clickable area within an image map. Different shapes can be defined using the shape attribute (rect, circle, poly, default).
+    <img> : This tag is used to embed an image in the HTML document and associate it with an image map using the usemap attribute.
+basic syntax:
+<img src="image.jpg" usemap="#mapname" >
+<map name="mapname">
+    <area shape="rect" coords="x1,y1,x2,y2" href="link1.html" alt="Description1">
+    <area shape="circle" coords="x,y,radius" href="link2.html" alt="Description2">
+</map>
+
+shape : rect, circle, poly, default
+coords : specifies the coordinates for the shape
+href : page to open when the area is clicked
+alt : alternative text for the area
+
+image maps advantages:
+1 to make images interactive
+2 to reduce multiple images 
+3 useful diagrams , geographycal maps , dashboards etc.m
+
+
+rec coord takes 4 values x1,y1,x2,y2
+circle coord takes 3 values x,y,radius
+poly coord takes multiple values x1,y1,x2,y2,x3,y3,...
+
+
+Q) hospital homepage image 3 sections opd, emergency, diagonstic lab (all 3 should have proper description of all)
+i want an image fititng entire screen
+hospital background with hospital name with  3 sections
+under all 3 blocks 
+view details for opd in rectangle 
+diagnotsic in circle
+emergency zone in a polygon
+
+proper pages for all 3 sections with dummy text and images contact etc should be real
+for navigation pages header with background color
+
+
+name hospital
+3 images of opd emergency and diagontics
+view details in 3 shpes
