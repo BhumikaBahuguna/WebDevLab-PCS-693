@@ -1,0 +1,33 @@
+CSS styling
+1 inline styling is done using style attribute
+used to style individual element
+it has higest priority
+
+2 internal styling applied using style tag which is defined within the head section
+we go for it when we hace multiple blocks requiring styling for diff elements
+individual single document having a lot of elements to style
+drawback limited only to one individual document
+
+3 external styling is applied using link tag in the head section
+external css file is created with .css extension and linked to the html document
+we can use it across multiple documents using the link tag which is written in the head section of the html document
+it is the most efficient way to style multiple documents with the same css file
+
+we can use all 3 stylings in a single html document but the priority is inline > internal > external
+how to reesolve conflict between internal and external styling
+if there is a conflict between internal and external styling then the internal styling will take precedence over the external styling because it has higher priority
+
+IF :
+in internal styling color is given as blue
+in external styling color is orange 
+internal is applied first then external is applied and it will override the internal styling and the 
+final color will be orange because it is the latest applied styling
+
+college name should appear with the logo
+form fitting entire page main content in the centre
+all content of form in a frame should look with real
+upon filling form give a response message (dont use javascript)
+hovering in the submit option 
+use concepts of forms and css to design the form and style it
+
+

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Student Feedback Form</title>
+
+<!-- EXTERNAL CSS -->
+<link rel="stylesheet" href="style.css">
+
+<!-- INTERNAL CSS -->
+<style>
+
+h2{
+text-align:center;
+color:#0077b6;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- HEADER WITH LOGO -->
+<div class="header">
+<img src="logo.png">
+<h1>Graphic Era Deemed to be University</h1>
+</div>
+
+<div class="container">
+
+<div class="form-box">
+
+<h2>Student Feedback Form</h2>
+
+<form action="response.html">
+<label>Student Name</label>
+<input type="text" required>
+<label>Email Address</label>
+<input type="email" required>
+<label>Course Selection</label>
+<select required>
+<option value="">--Select Course--</option>
+<option>Computer Science</option>
+<option>Information Technology</option>
+<option>Electronics</option>
+<option>Mechanical</option>
+</select>
+<label>Feedback / Comments</label>
+<textarea rows="4" required></textarea>
+<input type="submit"
+value="Submit Feedback"
+class="submit-btn"
+style="background:#0077b6; color:white; border:none; padding:12px; cursor:pointer; font-size:16px;">
+</form>
+</div>
+</div>
+</body>
+</html>
+
+
