@@ -1,0 +1,33 @@
+javascript is a client side scripting language used for designing dynamic websites
+on client side more things which work are html and css
+on server end scripting languages which run are php , database .
+js is used to
+respond to user actions
+change html content dynamically
+ways to provide input in javascript
+1 prompt() method in this we can take input from user and store it in a variable
+2 input using html element getelementbyid() method in this we can take input from user using html element and store it in a variable
+diff btw let and var is mainly in scope and hoisting
+var is function scoped and can be redeclared and updated
+let is block scoped and cannot be redeclared also cannot be updated
+output in js
+1 popup box
+2 output in console
+3 output in html element
+4 output on web page
+5 output using innertext
+
+diff btw inner html nd inner text
+inner html is used to get or 0set the html content of an element
+inner text is used to get or set the text content of an element
+
+objects to javascript
+objects are used to store multiple values in a single variable
+objects are defined using curly braces {} and consist of key value pairs
+arrays in javascript
+arrays are used to store multiple values in a single variable
+arrays are defined using square brackets [] and can hold values of any type
+functions in javascript
+functions are reusable blocks of code that perform a specific task
+functions are defined using the function keyword followed by the function name and parentheses
+functions can take parameters and return values

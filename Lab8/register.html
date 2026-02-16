@@ -1,0 +1,282 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<title>GEU Online Examination Registration</title>
+
+<style>
+
+/* BACKGROUND */
+body{
+    margin:0;
+    font-family:'Segoe UI', sans-serif;
+    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+}
+
+/* HEADER */
+header{
+    background:#0b2545;
+    color:white;
+    padding:22px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,0.35);
+}
+
+.logo{
+    width:85px;
+    margin-top:8px;
+}
+
+header h1{
+    margin:8px 0;
+    letter-spacing:1px;
+}
+
+header p{
+    margin:3px;
+}
+
+/* MAIN */
+.container{
+    text-align:center;
+    margin-top:45px;
+}
+
+/* NOTICE */
+.notice{
+    background:#ffffff;
+    width:55%;
+    margin:0 auto 25px;
+    padding:14px;
+    border-radius:10px;
+    font-weight:600;
+    color:#0b2545;
+    box-shadow:0 8px 20px rgba(0,0,0,0.25);
+}
+
+/* BUTTONS */
+button{
+    padding:13px 28px;
+    font-size:16px;
+    margin:10px;
+    background:#00a86b; /* emerald green */
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:600;
+    transition:0.25s;
+}
+
+button:hover{
+    background:black;
+}
+
+/* ADMIT CARD */
+.card{
+    border-radius:12px;
+    padding:28px;
+    margin:35px auto;
+    width:520px;
+    background:white;
+    display:none;
+    box-shadow:0 12px 30px rgba(0,0,0,0.35);
+    text-align:left;
+}
+
+.card h2{
+    text-align:center;
+    color:#0b2545;
+    margin-bottom:8px;
+}
+
+.card hr{
+    margin:10px 0 18px;
+}
+
+/* DETAILS */
+.details{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+}
+
+.photo{
+    width:115px;
+    height:135px;
+    border:2px solid #0b2545;
+    padding:2px;
+}
+
+/* TABLE */
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+}
+
+th{
+    background:#0b2545;
+    color:white;
+}
+
+th,td{
+    border:1px solid #ccc;
+    padding:9px;
+    text-align:center;
+}
+
+/* INSTRUCTIONS */
+.instructions{
+    margin-top:18px;
+    font-size:13px;
+}
+
+/* FOOTER */
+.footer{
+    text-align:center;
+    font-size:12px;
+    margin-top:18px;
+    color:#444;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Graphic Era Deemed to be University</h1>
+    <img src="geulogo.png" class="logo">
+    <p>Mid Term Examination - 2026</p>
+    <p>Online Registration & Admit Card Portal</p>
+</header>
+
+<div class="container">
+
+    <div class="notice">
+        📌 Registration Deadline: February 28, 2026
+    </div>
+
+    <button onclick="registerStudent()">Register Now</button>
+
+    <div class="card" id="admitCard">
+        <h2>Student Admit Card</h2>
+        <hr>
+
+        <div class="details">
+            <div>
+                <p id="studentName"></p>
+                <p id="regNumber"></p>
+                <p><strong>Program:</strong> B.Tech Computer Science</p>
+                <p><strong>Semester:</strong> V</p>
+                <p><strong>Exam Centre:</strong> GEU Main Campus</p>
+            </div>
+
+            <!-- KEEPING SAME IMAGE NAME -->
+            <img src="photo.png" class="photo">
+        </div>
+
+        <table>
+            <tr>
+                <th>Code</th>
+                <th>Subject</th>
+                <th>Date</th>
+                <th>Eligibility</th>
+            </tr>
+            <tr>
+                <td>CS501</td>
+                <td>Data Structures</td>
+                <td>10-03-2026</td>
+                <td>Approved</td>
+            </tr>
+            <tr>
+                <td>CS502</td>
+                <td>Operating Systems</td>
+                <td>12-03-2026</td>
+                <td>Approved</td>
+            </tr>
+            <tr>
+                <td>CS503</td>
+                <td>Database Systems</td>
+                <td>15-03-2026</td>
+                <td>Approved</td>
+            </tr>
+        </table>
+
+        <div class="instructions">
+            <strong>Important Instructions:</strong>
+            <ul>
+                <li>Carry this admit card to the examination hall.</li>
+                <li>Bring your valid college ID card.</li>
+                <li>Report at least 30 minutes before the exam.</li>
+            </ul>
+        </div>
+
+        <div style="text-align:center;">
+            <button onclick="printCard()">Print</button>
+            <button onclick="cancelCard()">Close</button>
+        </div>
+
+        <div class="footer">
+            Computer generated document — signature not required.
+        </div>
+    </div>
+
+</div>
+
+<script>
+
+function registerStudent() {
+
+    alert("Welcome to GEU Examination Registration.\nPlease enter your details.");
+
+    var name = prompt("Enter your Full Name:");
+    var reg = prompt("Enter your Registration Number:");
+
+    if(!name || !reg){
+        alert("Registration Failed! Missing details.");
+        return;
+    }
+
+    var confirmRegister = confirm(
+        "Please confirm your registration:\n\nName: " + name + "\nRegistration No: " + reg
+    );
+
+    if(confirmRegister){
+
+        alert("Registration Completed Successfully!");
+
+        document.getElementById("studentName").innerHTML =
+            "<strong>Name:</strong> " + name;
+
+        document.getElementById("regNumber").innerHTML =
+            "<strong>Registration No:</strong> " + reg;
+
+        document.getElementById("admitCard").style.display = "block";
+
+        window.scrollTo({
+            top: document.body.scrollHeight,
+            behavior: "smooth"
+        });
+
+    } else {
+
+        alert("Registration Cancelled.");
+
+    }
+}
+
+function printCard(){
+    window.print();
+}
+
+function cancelCard(){
+    document.getElementById("admitCard").style.display="none";
+}
+
+</script>
+
+</body>
+</html>
+```

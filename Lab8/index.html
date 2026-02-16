@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Exam Registration System</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #74ebd5, #9face6);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background: white;
+    padding: 40px;
+    width: 520px;
+    border-radius: 20px;
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 12px;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+.footer {
+    margin-top: 25px;
+    font-size: 14px;
+    color: #666;
+}
+</style>
+
+<script>
+function startRegistration() {
+
+    alert("Important Exam Instructions:\n1. Stable Internet Required\n2. Do not refresh the page\n3. Keep your ID ready");
+
+    let name = prompt("Enter your Full Name:");
+    if (name == null || name.trim() === "") {
+        alert("Invalid Name! Registration Cancelled ❌");
+        return;
+    }
+
+    let regNo = prompt("Enter your Registration Number:");
+    if (regNo == null || regNo.trim() === "") {
+        alert("Invalid Registration Number! Registration Cancelled ❌");
+        return;
+    }
+
+    let rollNo = prompt("Enter your University Roll Number:");
+    if (rollNo == null || rollNo.trim() === "") {
+        alert("Invalid University Roll Number! Registration Cancelled ❌");
+        return;
+    }
+
+    let isConfirmed = confirm(
+        "Please confirm your details:\n\n" +
+        "Name: " + name + "\n" +
+        "Registration No: " + regNo + "\n" +
+        "University Roll No: " + rollNo + "\n\n" +
+        "Do you want to submit?"
+    );
+
+    if (isConfirmed) {
+        localStorage.setItem("studentName", name);
+        localStorage.setItem("regNumber", regNo);
+        localStorage.setItem("rollNumber", rollNo);
+
+        alert("Registration Successful ✅");
+
+        window.open("new.html", "_blank", "width=700,height=500");
+    }
+    else {
+        alert("Registration Cancelled ❌");
+    }
+}
+</script>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Online Examination Portal</h2>
+    <p>Click below to start your registration process.</p>
+    <button onclick="startRegistration()">Start Registration</button>
+    <div class="footer">© 2026 Online Exam Registration System</div>
+</div>
+
+</body>
+</html>

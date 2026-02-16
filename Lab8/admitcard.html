@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admit Card</title>
+
+<style>
+body{
+    font-family: Arial;
+    background:#f5f5f5;
+}
+
+.card{
+    width:600px;
+    margin:40px auto;
+    padding:20px;
+    border:3px solid #003366;
+    background:white;
+}
+
+.photo{
+    width:100px;
+    float:right;
+    border:1px solid black;
+}
+
+button{
+    padding:10px 20px;
+    margin-top:20px;
+    background:#2e7d32;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+
+button:hover{
+    background:black;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<h2>Graphic Era University</h2>
+<h3>Admit Card</h3>
+
+<img src="photo.png" class="photo">
+
+<p id="name"></p>
+<p id="reg"></p>
+<p><b>Department:</b> CSE</p>
+<p><b>Semester:</b> 4</p>
+
+<table border="1" width="100%" cellpadding="8">
+<tr><th>Code</th><th>Subject</th></tr>
+<tr><td>CS401</td><td>Operating Systems</td></tr>
+<tr><td>CS402</td><td>DBMS</td></tr>
+<tr><td>CS403</td><td>Computer Networks</td></tr>
+</table>
+
+<br>
+
+<button onclick="window.print()">Print</button>
+<button onclick="window.close()">Close</button>
+
+</div>
+
+<script>
+
+const params = new URLSearchParams(window.location.search);
+
+document.getElementById("name").innerHTML =
+"<b>Name:</b> "+params.get("name");
+
+document.getElementById("reg").innerHTML =
+"<b>Registration No:</b> "+params.get("reg");
+
+</script>
+
+</body>
+</html>

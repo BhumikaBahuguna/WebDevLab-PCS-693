@@ -1,0 +1,18 @@
+WINDOWS METHODS
+1 alert() method in javascript gives some critical info
+2 prompt() takes some input from user dynamically
+3 confirm() used for decision making
+4 open() opens a new window in same or diff tab as user wants
+5 close it closes a window only if it was opened by javascript
+6 print opens the print dialog of the browser
+
+college name as header should have a logo and background color
+shows a button asking register
+click on register says welcome for registration and aks for name after entering name ask confirm register if yes open a new window and display admit card details
+name photo
+department
+semester
+sub names 
+then it further has 2 options
+1 print
+1 close

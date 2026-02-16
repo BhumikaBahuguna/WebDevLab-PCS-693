@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Hall Ticket Preview</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #eef2f7;
+    margin: 0;
+    padding: 40px;
+    text-align: center;
+}
+
+.card {
+    background: white;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
+    width: 850px;
+    margin: auto;
+    text-align: left;
+}
+
+.header {
+    text-align: center;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    color: #007bff;
+    margin: 0;
+}
+
+.student-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.student-details {
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.student-photo img {
+    width: 120px;
+    height: 150px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.section-title {
+    margin-top: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table th, table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+table th {
+    background: #007bff;
+    color: white;
+}
+
+.footer-info {
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.button-section {
+    text-align: center;
+    margin-top: 25px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.printBtn {
+    background: #28a745;
+    color: white;
+}
+
+.printBtn:hover {
+    background: #1e7e34;
+}
+
+.closeBtn {
+    background: #dc3545;
+    color: white;
+}
+
+.closeBtn:hover {
+    background: #a71d2a;
+}
+
+/* Print Styling */
+@media print {
+    body {
+        background: white;
+    }
+    .button-section {
+        display: none;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+    <div class="header">
+        <h1>UNIVERSITY EXAMINATION HALL TICKET</h1>
+        <p>Department of Computer Science & Engineering</p>
+    </div>
+
+    <div class="student-info">
+        <div class="student-details">
+            <p><strong>Name:</strong> <span id="name"></span></p>
+            <p><strong>Registration Number:</strong> <span id="regNo"></span></p>
+            <p><strong>Semester:</strong> 6</p>
+        </div>
+
+        <div class="student-photo">
+            <img src="photo.png" alt="Student Photo">
+        </div>
+    </div>
+
+    <div class="section-title">Exam Time Table</div>
+
+    <table>
+        <tr>
+            <th>Subject</th>
+            <th>Date</th>
+            <th>Time</th>
+        </tr>
+        <tr>
+            <td>Compiler Design</td>
+            <td>10 March 2026</td>
+            <td>10:00 AM - 1:00 PM</td>
+        </tr>
+        <tr>
+            <td>Computer Networks</td>
+            <td>13 March 2026</td>
+            <td>10:00 AM - 1:00 PM</td>
+        </tr>
+        <tr>
+            <td>Software Engineering</td>
+            <td>16 March 2026</td>
+            <td>10:00 AM - 1:00 PM</td>
+        </tr>
+        <tr>
+            <td>Artificial Intelligence</td>
+            <td>19 March 2026</td>
+            <td>10:00 AM - 1:00 PM</td>
+        </tr>
+    </table>
+
+    <div class="footer-info">
+        <p><strong>Status:</strong> Registered Successfully</p>
+        <p><strong>Reporting Time:</strong> 11:00 AM</p>
+    </div>
+
+    <div class="button-section">
+        <button class="printBtn" onclick="window.print()">Print Ticket</button>
+        <button class="closeBtn" onclick="window.close()">Close Window</button>
+    </div>
+
+</div>
+
+<script>
+document.getElementById("name").innerText =
+    localStorage.getItem("studentName") || "N/A";
+
+document.getElementById("regNo").innerText =
+    localStorage.getItem("regNumber") || "N/A";
+
+window.onafterprint = function () {
+    window.close();
+};
+</script>
+
+</body>
+</html>
