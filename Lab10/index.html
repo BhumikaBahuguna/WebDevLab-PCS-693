@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Simple Calendar</title>
+<style>
+body{
+    font-family: Arial;
+    text-align:center;
+    background:#eef2f7;
+}
+h1{
+    margin-top:20px;
+    font-size:32px;
+}
+/* Dropdowns */
+select{
+    padding:8px;
+    margin:12px;
+    font-size:16px;
+}
+/* Table */
+table{
+    margin:25px auto;
+    border-collapse:collapse;
+    font-size:18px;
+}
+/* Header days */
+th{
+    background:#2c3e50;
+    color:white;
+    padding:12px;
+    width:70px;
+    height:50px;
+}
+/* Cells */
+td{
+    border:1px solid #555;
+    width:70px;
+    height:70px;
+    text-align:center;
+    transition:0.2s;
+}
+/* Alternate rows */
+tbody tr:nth-child(even){
+    background:#dfe6e9;
+}
+tbody tr:nth-child(odd){
+    background:#ffffff;
+}
+/* Hover */
+td:hover{
+    background:#74b9ff;
+    color:white;
+    cursor:pointer;
+}
+</style>
+</head>
+<body>
+<h1>Simple Calendar</h1>
+<select id="month"></select>
+<select id="year"></select>
+<table id="calendar">
+<thead>
+<tr>
+<th>Sun</th>
+<th>Mon</th>
+<th>Tue</th>
+<th>Wed</th>
+<th>Thu</th>
+<th>Fri</th>
+<th>Sat</th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+<script>
+// Months
+const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const monthSelect = document.getElementById("month");
+months.forEach((m,i)=>{
+    let opt=document.createElement("option");
+    opt.value=i;
+    opt.text=m;
+    monthSelect.add(opt);
+});
+// Years 2026–2032
+const yearSelect = document.getElementById("year");
+for(let y=2026;y<=2032;y++){
+    let opt=document.createElement("option");
+    opt.value=y;
+    opt.text=y;
+    yearSelect.add(opt);
+}
+function generateCalendar(){
+    let month=parseInt(monthSelect.value);
+    let year=parseInt(yearSelect.value);
+    let firstDay=new Date(year,month,1).getDay();
+    let totalDays=new Date(year,month+1,0).getDate();
+    let tbody=document.querySelector("#calendar tbody");
+    tbody.innerHTML="";
+    let row=document.createElement("tr");
+    for(let i=0;i<firstDay;i++){
+        row.appendChild(document.createElement("td"));
+    }
+    for(let d=1;d<=totalDays;d++){
+        let cell=document.createElement("td");
+        cell.textContent=d;
+        row.appendChild(cell);
+        if((firstDay+d)%7===0){
+            tbody.appendChild(row);
+            row=document.createElement("tr");
+        }
+    }
+    tbody.appendChild(row);
+}
+generateCalendar();
+monthSelect.onchange=generateCalendar;
+yearSelect.onchange=generateCalendar;
+</script>
+</body>
+</html>
