@@ -2,9 +2,7 @@
 <html>
 <head>
 <title>College Home Page</title>
-
 <style>
-
 body{
     margin:0;
     font-family:Arial, sans-serif;
@@ -12,41 +10,37 @@ body{
     background:#f4f6f9;
     transition:0.5s;
 }
-
 /* Header */
 header{
     background:#0d47a1;
     color:white;
     padding:25px;
 }
-
 .logo{
     width:140px;
     margin-top:10px;
 }
-
 /* Tagline */
 .tagline{
     font-size:18px;
     margin-top:5px;
     font-style:italic;
 }
-
-/* Scrolling text */
-.marquee{
+/* Announcement text */
+.announcement{
     background:#1976d2;
     color:white;
-    padding:8px;
+    padding:10px;
     font-weight:bold;
+    font-size:16px;
 }
-
+/* Content */
 .container{
     padding:30px;
     max-width:900px;
     margin:auto;
     line-height:1.6;
 }
-
 /* Images */
 .photos img{
     width:220px;
@@ -54,7 +48,6 @@ header{
     border-radius:8px;
     box-shadow:0 4px 10px rgba(0,0,0,0.2);
 }
-
 /* Button */
 button{
     padding:14px 28px;
@@ -65,32 +58,24 @@ button{
     border-radius:6px;
     cursor:pointer;
 }
-
 button:hover{
     background:black;
 }
-
 section{
     margin-top:25px;
 }
-
 </style>
 </head>
-
 <body>
-
 <header>
 <h1>Graphic Era University</h1>
 <div class="tagline">Transforming Dreams into Reality</div>
 <img src="geulogo.png" class="logo">
 </header>
-
-<div class="marquee">
-<marquee>Admissions Open • NAAC Accredited • Top Placements • Innovation Driven Campus • Welcome to GEU</marquee>
+<div class="announcement">
+Admissions Open • NAAC Accredited • Top Placements • Innovation Driven Campus • Welcome to GEU
 </div>
-
 <div class="container">
-
 <section>
 <h2>About the University</h2>
 <p>
@@ -99,7 +84,6 @@ research innovation, and holistic development of students. The university provid
 a dynamic learning environment supported by experienced faculty and modern infrastructure.
 </p>
 </section>
-
 <section>
 <h2>Our Vision</h2>
 <p>
@@ -107,7 +91,6 @@ To nurture talent, encourage creativity, and prepare students to become responsi
 global citizens who contribute meaningfully to society and industry.
 </p>
 </section>
-
 <section>
 <h2>Facilities</h2>
 <p>
@@ -116,7 +99,6 @@ sports facilities, and collaborative learning spaces designed to enhance the
 student experience.
 </p>
 </section>
-
 <section>
 <h2>Placements</h2>
 <p>
@@ -125,23 +107,16 @@ across IT, consulting, finance, and core engineering sectors through dedicated
 training and industry partnerships.
 </p>
 </section>
-
 <h2>Campus Highlights</h2>
-
 <div class="photos">
 <img src="one.jpg">
 <img src="two.jpg">
 <img src="three.jpg">
 </div>
-
 <br>
-
 <button onclick="changeTheme()">Change Theme</button>
-
 </div>
-
 <script>
-
 const themes = [
 "#1e1e2f",
 "#263238",
@@ -150,15 +125,11 @@ const themes = [
 "#880e4f",
 "#3e2723"
 ];
-
 let i = 0;
-
 function changeTheme(){
     document.body.style.backgroundColor = themes[i];
     i = (i + 1) % themes.length;
 }
-
 </script>
-
 </body>
 </html>
