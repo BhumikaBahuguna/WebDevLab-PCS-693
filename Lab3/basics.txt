@@ -3,7 +3,7 @@ forms are used in order to collect a set of info from user
 info can be of different types text,numbers,image,password,email,urls,checkboxes,radiobuttons,dropdown list,input list
 form tag can not be used individually there are many tags used with it 
 basic attributes in a form tag:
-1) action 
+1) action
 (we can not directly collect info and dump it we collect info to further process it in server)
 where we neeed to send data for processing is done by action which defines where datat will go
 
