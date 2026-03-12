@@ -6,27 +6,23 @@ basic attributes in a form tag:
 1) action
 (we can not directly collect info and dump it we collect info to further process it in server)
 where we neeed to send data for processing is done by action which defines where datat will go
-
 2) auto complete 
 once form data is filled already we can refill it any no of times so it suggest data info to be filled (i dont want that dat to be seen by somebody else)
 3)method
 methods we use to send or get data
 get,post,put etc
 diff btw get and post
-data in seen in get post is not able to see datat therefore we use post with critical info that we dont want to disclose 
+data in seen in get post is not able to see data therefore we use post with critical info that we dont want to disclose 
 4)target
 redirecting this form to some other page where it is navigated (open in a new tab =_blank)
-
 diff input types
 1)dropdown list can be defined using select tab (id,name are attributes used with select)
 id is needed to access it,styling it (mainly identifying or accessing element)
 option tag is used in dropdown tag
-
 why should we have label tags
 on frontend user should know what to give input
 for attribute in label tag is used and why it should be matched with the id of element
 connecting element with input field , used for providing more accessibility that is why it is matched with id
-
 basic html validations
 required
 minimum length/max length can be specified
@@ -34,25 +30,22 @@ min,max,step value
 type -specifies what kind of data we are expecting
 patterns-to match specific requirement (ex for email we need @gmail.com)
 patterns are defined using regular expressions
-
 input type hidden : to transfer data directly to server(to send critical info skips user)
 dropdown list is specified using select
 datalist is defined using select tag
 textarea for multiline text
 &nsbp(non breaking space) - used to give a space 
 hover-color of button changes when cursor hovers on it
-
 diff between drop down list and input type as list
 drop down list initially shows a dropdown optionbut input type list shows option when we bring cursor on it
 in drop down list we can write anything /cannot slelect anything other than drop down options but in input type list we can write somthing else also
-
 enabling accessibility i want to enter some input in a  box i have to click that box first
  overflow-auto allows to extend textarea mpre than screen size
 
  drawback of html-validation-gives error after subitting at end instead of tellin user while filling form
  to overcome this drawback we use javascript validation
  
- in html you can provide your own error but in js we can do that
+ in html you can not provide your own error but in js we can do that
 
 
  Q) background colorform should be organized

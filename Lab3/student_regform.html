@@ -3,47 +3,34 @@
 <head>
     <title>Student Course Registration</title>
 </head>
-
 <body bgcolor="#E6F2FF">
-
 <h2 align="center">
     <b>GRAPHIC ERA DEEMED TO BE UNIVERSITY</b><br>
     <b>Student Course Registration Form</b>
 </h2>
-
 <center>
     <img src="logo.png" alt="College Logo" height="120">
 </center>
-
-<marquee>
+<marquee direction="right">
     <font color="blue" size="4">
         Graphic Era Deemed to be University, Dehradun
     </font>
 </marquee>
-
 <hr>
-
 <form action="thankyou.html" method="get" autocomplete="off" target="_blank">
-
-
 <label for="name"><b>Student Name:</b></label><br>
 <input type="text" id="name" name="name" required minlength="3" maxlength="30"><br><br>
-
 <label for="email"><b>University Email:</b></label><br>
 <input type="email" id="email" name="email" required pattern="[0-9]+@geu\.ac\.in"><br><br>
-
 <label for="roll"><b>USN / Roll Number:</b></label><br>
 <input type="text" id="roll" name="roll" required pattern="[A-Z]{2}[0-9]{2}[A-Z]{3}"><br><br>
-
 <label for="age"><b>Age:</b></label><br>
 <input type="number" id="age" name="age" required min="18" max="30"><br><br>
-
 <label><b>Gender:</b></label><br>
 <input type="radio" id="male" name="gender" required>
 <label for="male">Male</label>&nbsp;&nbsp;
 <input type="radio" id="female" name="gender">
 <label for="female">Female</label><br><br>
-
 <label for="course"><b>Select Course:</b></label><br>
 <select id="course" name="course" required>
     <option value="">--Select--</option>
@@ -52,20 +39,15 @@
     <option>Data Structures</option>
     <option>Web Development</option>
 </select><br><br>
-
 <label for="feedback"><b>Feedback:</b></label><br>
 <textarea id="feedback" name="feedback" rows="4" cols="40"></textarea><br><br>
-
 <input type="hidden" name="college" value="Graphic Era University">
-
 <center>
     <input type="submit" value="Submit">
     &nbsp;&nbsp;
     <input type="reset" value="Reset">
 </center>
-
 </form>
-
 </body>
 </html>
 

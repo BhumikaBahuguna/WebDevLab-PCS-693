@@ -1,134 +1,89 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>College Home Page</title>
+<title>Graphic Era University</title>
 <style>
 body{
+    font-family: Arial, sans-serif;
     margin:0;
-    font-family:Arial, sans-serif;
-    text-align:center;
-    background:#f4f6f9;
-    transition:0.5s;
+    padding:0;
+    background-color:#f4f4f4;
 }
-/* Header */
 header{
-    background:#0d47a1;
+    background-color:#0a4a8a;
     color:white;
-    padding:25px;
+    padding:20px;
+    text-align:center;
 }
-.logo{
-    width:140px;
-    margin-top:10px;
+h1{
+    margin:10px;
 }
-/* Tagline */
-.tagline{
-    font-size:18px;
-    margin-top:5px;
-    font-style:italic;
+h2{
+    color:#0a4a8a;
+    text-align:center;
 }
-/* Announcement text */
-.announcement{
-    background:#1976d2;
-    color:white;
-    padding:10px;
-    font-weight:bold;
-    font-size:16px;
-}
-/* Content */
-.container{
-    padding:30px;
-    max-width:900px;
+p{
+    width:70%;
     margin:auto;
     line-height:1.6;
+    text-align:center;
 }
-/* Images */
-.photos img{
-    width:220px;
+img{
     margin:10px;
     border-radius:8px;
-    box-shadow:0 4px 10px rgba(0,0,0,0.2);
 }
-/* Button */
+.gallery{
+    text-align:center;
+}
 button{
-    padding:14px 28px;
+    display:block;
+    margin:20px auto;
+    padding:10px 20px;
     font-size:16px;
-    background:#0d47a1;
+    background-color:#0a4a8a;
     color:white;
     border:none;
-    border-radius:6px;
+    border-radius:5px;
     cursor:pointer;
 }
 button:hover{
-    background:black;
+    background-color:#06335f;
 }
-section{
-    margin-top:25px;
+footer{
+    background-color:#222;
+    color:white;
+    padding:15px;
+    margin-top:20px;
+    text-align:center;
 }
 </style>
 </head>
 <body>
 <header>
-<h1>Graphic Era University</h1>
-<div class="tagline">Transforming Dreams into Reality</div>
-<img src="geulogo.png" class="logo">
+<img src="geulogo.png" alt="GEU Logo" height="120" width="120">
+<h1>Graphic Era Deemed to be University</h1>
 </header>
-<div class="announcement">
-Admissions Open • NAAC Accredited • Top Placements • Innovation Driven Campus • Welcome to GEU
+<h2>About Graphic Era University</h2>
+<p>
+Graphic Era Deemed to be University, located in Dehradun, Uttarakhand, is known for academic excellence, advanced research, and vibrant campus life. The university offers undergraduate, postgraduate, and doctoral programs in Engineering, Management, Computer Applications, Sciences, and Humanities.<br><br>
+With modern infrastructure, industry collaborations, and global exposure, Graphic Era prepares students to become innovative leaders and professionals.
+</p>
+<h2>Campus Gallery</h2>
+<div class="gallery">
+<img src="one.jpg" height="240" width="180" alt="Campus Image 1">
+<img src="two.jpg" height="240" width="180" alt="Campus Image 2">
+<img src="three.jpg" height="240" width="180" alt="Campus Image 3">
 </div>
-<div class="container">
-<section>
-<h2>About the University</h2>
-<p>
-Graphic Era University is a premier institution committed to academic excellence,
-research innovation, and holistic development of students. The university provides
-a dynamic learning environment supported by experienced faculty and modern infrastructure.
-</p>
-</section>
-<section>
-<h2>Our Vision</h2>
-<p>
-To nurture talent, encourage creativity, and prepare students to become responsible
-global citizens who contribute meaningfully to society and industry.
-</p>
-</section>
-<section>
-<h2>Facilities</h2>
-<p>
-The campus offers advanced laboratories, digital libraries, smart classrooms,
-sports facilities, and collaborative learning spaces designed to enhance the
-student experience.
-</p>
-</section>
-<section>
-<h2>Placements</h2>
-<p>
-Graphic Era has a strong placement record with students placed in top companies
-across IT, consulting, finance, and core engineering sectors through dedicated
-training and industry partnerships.
-</p>
-</section>
-<h2>Campus Highlights</h2>
-<div class="photos">
-<img src="one.jpg">
-<img src="two.jpg">
-<img src="three.jpg">
-</div>
-<br>
-<button onclick="changeTheme()">Change Theme</button>
-</div>
+<button onclick="changeColor()">Change Color</button>
+<footer>
+© 2026 Graphic Era Deemed to be University | All Rights Reserved
+</footer>
 <script>
-const themes = [
-"#1e1e2f",
-"#263238",
-"#4a148c",
-"#004d40",
-"#880e4f",
-"#3e2723"
-];
-let i = 0;
-function changeTheme(){
-    document.body.style.backgroundColor = themes[i];
-    i = (i + 1) % themes.length;
+function changeColor(){
+    var r = Math.floor(Math.random()*256);
+    var g = Math.floor(Math.random()*256);
+    var b = Math.floor(Math.random()*256);
+    document.body.style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
 }
 </script>
 </body>

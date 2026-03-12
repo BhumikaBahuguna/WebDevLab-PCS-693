@@ -1,4 +1,4 @@
-html tage (list,tables) : to create a simple html file to 
+html tags (list,tables) : to create a simple html file to demonstrate
 unordered list   <ul>
 ordered list     <ol>
 descriptive list <dl>
@@ -16,7 +16,6 @@ example:
 same goes for ordered list, some more symbols used in odered are alphabetic(lower/upper), roman(lower/upper)
 to embedd them in code use type attribute in ol tag
 
-
 Design a web page for a college department that displays
 1) department facilities using an unordered list (depart=CSE , mention department name first (add a scrolling text below main heading)list everything else acc to yourself deprtment faciilties and all in points)
 2)semester-wise subjects using an ordered list    (sem 1-8 (mention 5 sub per sem))
@@ -29,8 +28,6 @@ other extra attractive functions of html
 make it a bit impressive
 use backround images and other (give img as img name and also tell me by what name should i save the image)
 dont use anything rather then what is used in below info
-
-
 
 TABLES in html
 table are used to display data in tabular form

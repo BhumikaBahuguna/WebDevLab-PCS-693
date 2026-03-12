@@ -4,7 +4,7 @@ as image map lets you make different clickable areas on an image which can be li
 in html this is done using the <map> and <area> tags.
 2 types of links:
 absolute and relative links.
-    Basic tage used in HTML maps:
+    Basic tags used in HTML maps:
     <map> : This tag is used to define an image map. It contains one or more <area> tags.
     <area> : This tag is used to define a clickable area within an image map. Different shapes can be defined using the shape attribute (rect, circle, poly, default).
     <img> : This tag is used to embed an image in the HTML document and associate it with an image map using the usemap attribute.
