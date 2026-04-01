@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>Hello!</title>
+</head>
+
+<body>
+
+<?php
+$user ='root';
+$pass ='';
+$db='DEMOSAMPLE';
+//create connection
+$con = mysqli_connect('localhost', $user, $pass,$db) or
+    die("Connection failed: " . mysqli_connect_error());
+
+echo "Connected successfully";
+// Create database
+$sql = "insert into student values('01','JOHN')";
+if (mysqli_query($con, $sql)) {
+    echo "Value inserted  successfully";
+} else {
+    echo "Error creating database: " . mysqli_error($con);
+}
+
+
+
+?>
+
+</body>
+</html>
