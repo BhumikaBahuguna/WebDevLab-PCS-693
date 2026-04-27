@@ -1,0 +1,35 @@
+fread reads the entire file
+takes 2 parameters 
+(base addrs filesize)
+
+
+fgets read line by line
+while(!feof($myfile)){
+    echo fgetc($myfile)
+}
+
+die is used to stop the execution of the program
+die("message") will print the message and then stop the execution of the program
+
+for writing in file
+fwrite($myfile, "text to write")
+fwrite($myfile, $txt) where $txt is a variable containing the text to write
+
+
+write a php program to create a file in write mode write some content to a file now read the content charcter by character check if 
+the characters are consonant then kepp them in a file consonant.txt otherwise keep them in vowel.txt
+
+
+
+assignment:
+create a php program to design employees database validation and design a client end where you can take data of employees fetch the content 
+nd store into the database
+validation
+database connectivity
+queries
+
+4 buttons
+insertion(in database)
+updation
+deletion(delete button)
+data retrieval
