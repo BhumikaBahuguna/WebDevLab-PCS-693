@@ -1,0 +1,39 @@
+body {
+    font-family: Arial;
+    text-align: center;
+    background: #f4f6fb;
+    margin: 0;
+}
+
+input, button {
+    width: 260px;
+    padding: 8px;
+    margin: 6px;
+}
+
+button {
+    background: orange;
+    color: white;
+    border: none;
+}
+
+.data-table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 80%;
+}
+
+.data-table th, .data-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.data-table th {
+    background: orange;
+    color: white;
+}
+
+.message {
+    color: orange;
+    font-weight: bold;
+}

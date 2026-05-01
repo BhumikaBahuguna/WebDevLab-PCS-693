@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Average and Smallest of 3 Numbers</title>
+    <title>Swap Two Numbers</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -37,7 +37,7 @@
             font-size: 16px;
         }
         button {
-            background-color: #2563eb;
+            background-color: #16a34a;
             color: #ffffff;
             border: none;
             padding: 10px 18px;
@@ -48,18 +48,18 @@
         }
         .result {
             margin-top: 20px;
-            background-color: #eef2ff;
-            border: 1px solid #c7d2fe;
+            background-color: #ecfdf5;
+            border: 1px solid #86efac;
             border-radius: 6px;
             padding: 14px;
-            color: #1f2a44;
+            color: #14532d;
             line-height: 1.6;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Average and Smallest of 3 Numbers</h1>
+        <h1>Swap Two Numbers</h1>
 
         <form method="post">
             <div class="form-group">
@@ -70,25 +70,22 @@
                 <label>Second Number</label>
                 <input type="number" step="any" name="num2" required>
             </div>
-            <div class="form-group">
-                <label>Third Number</label>
-                <input type="number" step="any" name="num3" required>
-            </div>
-            <button type="submit">Find Average and Smallest</button>
+            <button type="submit">Swap Numbers</button>
         </form>
 
         <?php
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $num1 = (float)$_POST["num1"];
                 $num2 = (float)$_POST["num2"];
-                $num3 = (float)$_POST["num3"];
-
-                $average = ($num1 + $num2 + $num3) / 3;
-                $smallest = min($num1, $num2, $num3);
 
                 echo "<div class='result'>";
-                echo "Average = " . number_format($average, 2) . "<br>";
-                echo "Smallest Number = " . $smallest;
+                echo "Before Swap: First = $num1, Second = $num2<br>";
+
+                $temp = $num1;
+                $num1 = $num2;
+                $num2 = $temp;
+
+                echo "After Swap: First = $num1, Second = $num2";
                 echo "</div>";
             }
         ?>

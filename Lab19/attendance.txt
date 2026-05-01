@@ -1,0 +1,8 @@
+101 - Ram - Present
+102 - Sita - Absent
+103 - John - Present
+104 - Amit - Absent
+105 - Neha - Present
+106 - Rahul - Absent
+107 - Anjali - Present
+108 - Florida - Present
