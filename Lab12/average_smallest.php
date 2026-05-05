@@ -78,20 +78,29 @@
         </form>
 
         <?php
-            if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                $num1 = (float)$_POST["num1"];
-                $num2 = (float)$_POST["num2"];
-                $num3 = (float)$_POST["num3"];
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $num1 = (float)$_POST["num1"];
+        $num2 = (float)$_POST["num2"];
+        $num3 = (float)$_POST["num3"];
 
-                $average = ($num1 + $num2 + $num3) / 3;
-                $smallest = min($num1, $num2, $num3);
+    // Average
+        $average = ($num1 + $num2 + $num3) / 3;
 
-                echo "<div class='result'>";
-                echo "Average = " . number_format($average, 2) . "<br>";
-                echo "Smallest Number = " . $smallest;
-                echo "</div>";
-            }
-        ?>
+    // Find smallest using if-else
+        if ($num1 <= $num2 && $num1 <= $num3) {
+            $smallest = $num1;
+        } elseif ($num2 <= $num1 && $num2 <= $num3) {
+            $smallest = $num2;
+        } else {
+            $smallest = $num3;
+    }
+
+        echo "<div class='result'>";
+        echo "Average = " . number_format($average, 2) . "<br>";
+        echo "Smallest Number = " . $smallest;
+        echo "</div>";
+    }
+    ?>
     </div>
 </body>
 </html>
