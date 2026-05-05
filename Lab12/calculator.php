@@ -105,7 +105,7 @@
                 } elseif ($operation == "sub") {
                     $resultText = "$num1 - $num2 = " . ($num1 - $num2);
                 } elseif ($operation == "mul") {
-                    $resultText = "$num1 × $num2 = " . ($num1 * $num2);
+                    $resultText = "$num1 * $num2 = " . ($num1 * $num2);
                 } elseif ($operation == "div") {
                     if ($num2 == 0) {
                         $resultText = "<span class='error'>Division by zero is not allowed.</span>";

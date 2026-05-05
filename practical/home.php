@@ -8,7 +8,7 @@ unset($_SESSION['message']);
 <head><link rel="stylesheet" href="style.css"></head>
 <body>
     
-<h2>Home - Create Database & Table</h2>
+<h2>Home - Book Database</h2>
 
 <?php if ($message) echo "<div class='message'>$message</div>"; ?>
 

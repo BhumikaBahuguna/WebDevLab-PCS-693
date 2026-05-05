@@ -12,11 +12,11 @@ if (isset($_POST['create'])) {
     mysqli_query($conn, "CREATE DATABASE IF NOT EXISTS `$dbname`");
     mysqli_select_db($conn, $dbname);
 
-    $sql = "CREATE TABLE IF NOT EXISTS students (
+    $sql = "CREATE TABLE IF NOT EXISTS books (
         id INT AUTO_INCREMENT PRIMARY KEY,
-        rollno INT UNIQUE,
-        name VARCHAR(50),
-        sub1 INT, sub2 INT, sub3 INT, sub4 INT
+        title VARCHAR(100),
+        author VARCHAR(100),
+        availability VARCHAR(20)
     )";
 
     $_SESSION['message'] = mysqli_query($conn, $sql)
