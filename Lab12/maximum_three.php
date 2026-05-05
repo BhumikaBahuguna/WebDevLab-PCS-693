@@ -32,62 +32,71 @@
             border: 1px solid #ddd;
             border-radius: 4px;
             width: 100%;
-            box-sizing: border-box;
         }
         button {
             background-color: #16a34a;
             color: white;
-            padding: 12px 24px;
+            padding: 12px;
             border: none;
             border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-            margin-top: 15px;
             width: 100%;
-        }
-        button:hover {
-            background-color: #15803d;
         }
         .result {
             background-color: #f0f0f0;
             padding: 15px;
-            border-radius: 5px;
             margin-top: 20px;
+            border-radius: 5px;
             font-weight: bold;
-            font-size: 18px;
-            color: #1f2a44;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Find Maximum of Three Numbers</h1> 
-        <form method="post">
-            <div class="form-group">
-                <label>Enter First Number:</label>
-                <input type="number" name="num1" required>
-            </div>
-            <div class="form-group">
-                <label>Enter Second Number:</label>
-                <input type="number" name="num2" required>
-            </div>
-            <div class="form-group">
-                <label>Enter Third Number:</label>
-                <input type="number" name="num3" required>
-            </div>
-            <button type="submit">Find Maximum</button>
-        </form>
+<div class="container">
 
-        <?php
-            if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                $num1 = $_POST["num1"];
-                $num2 = $_POST["num2"];
-                $num3 = $_POST["num3"];
+<h1>Find Maximum of Three Numbers</h1>
 
-                $max = max($num1, $num2, $num3);
-                echo "<div class='result'>The maximum number among $num1, $num2, and $num3 is: <strong>$max</strong></div>";
-            }
-        ?>
+<form method="post">
+    <div class="form-group">
+        <label>Enter First Number:</label>
+        <input type="number" name="num1" required>
     </div>
+    <div class="form-group">
+        <label>Enter Second Number:</label>
+        <input type="number" name="num2" required>
+    </div>
+    <div class="form-group">
+        <label>Enter Third Number:</label>
+        <input type="number" name="num3" required>
+    </div>
+    <button type="submit">Find Maximum</button>
+</form>
+
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    $num1 = $_POST["num1"];
+    $num2 = $_POST["num2"];
+    $num3 = $_POST["num3"];
+
+    // Step 1: Assume first number is max
+    $max = $num1;
+
+    // Step 2: Compare with second number
+    if ($num2 > $max) {
+        $max = $num2;
+    }
+
+    // Step 3: Compare with third number
+    if ($num3 > $max) {
+        $max = $num3;
+    }
+
+    echo "<div class='result'>
+    Maximum number among $num1, $num2 and $num3 is: <strong>$max</strong>
+    </div>";
+}
+?>
+
+</div>
 </body>
 </html>
